@@ -89,12 +89,25 @@ body {
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: #f5eded;
+  background-color: white;
   right: 0;
   top: 0;
   -webkit-transform: rotate(-1.25deg);
           transform: rotate(-1.25deg);
   z-index: -1;
+}
+
+.page::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #f8f4f4;
+  right: -1px;
+  top: 0;
+  -webkit-transform: rotate(-1.7deg);
+          transform: rotate(-1.7deg);
+  z-index: -2;
 }
 
 .chat {
@@ -112,13 +125,66 @@ body {
   max-width: 20%;
 }
 
+.tools {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.tools .red {
+  background-color: red;
+}
+
+.tools .green {
+  background-color: green;
+}
+
+.tools .blue {
+  background-color: blue;
+}
+
+.tools .yellow {
+  background-color: yellow;
+}
+
+.tools .orange {
+  background-color: orange;
+}
+
+.tools .black {
+  background-color: black;
+}
+
+.colorDot {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid lightgrey;
+  margin-right: 1em;
+  margin-bottom: .5em;
+  cursor: pointer;
+  border-radius: 50%;
+  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.colorDot:hover {
+  border: 1px solid black;
+}
+
 .draw {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 5;
-      -ms-flex-positive: 5;
-          flex-grow: 5;
+  -webkit-box-flex: 6;
+      -ms-flex-positive: 6;
+          flex-grow: 6;
 }
 
 .response {
@@ -137,5 +203,18 @@ body {
   margin: .7em;
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+.text:hover {
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  text-decoration: none;
+  border-bottom: 2px solid black;
+}
+
+.text:focus {
+  border-bottom: 2px solid black;
+  border: none;
 }
 /*# sourceMappingURL=app.css.map */
