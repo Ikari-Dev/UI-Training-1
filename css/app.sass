@@ -2,52 +2,96 @@
     box-sizing: border-box
     margin: 0
     padding: 0
+    
+
+body
+    width: 100%
+    height: 100%
+    font-family: Roboto
+    background: url("../ressources/wooden.jpg")
     overflow: hidden
     
-a 
-    color: white !important
-
-html, body
-    height: 100vh
-    width: 100vw
     
-body
-    background-color: #0F598C
-
-ul
-    padding: 1em !important
-    background-color: #07324e
-
-    li  
-        background-color: #07324e
-
-.grid
-    height: 100% !important
-    width: 100% !important
-    
-    
-
-.cell
-    position: relative
-    height: 80vh !important
-    border-radius: 20px
-    border: 3px solid #07324e
-    background-color: white
-    margin: 0 !important
-
-
-.grid-x 
-    padding: 3em !important
-
-.sender
-    position: absolute
+.navbar
+    background-color: white 
     display: flex
-    bottom: 0
-    margin-bottom: 0
+    flex-direction: row
+    justify-content: space-between
+    padding-top: 1rem 
+    padding-bottom: 1rem 
+    text-decoration: none
 
-    .intext
-        margin-bottom: 0
-        width: 100%
+    .titlebar
+        margin-left: 2rem
 
-    .send    
-        border: 1px solid black
+        .title
+            color: black
+
+    .link
+        margin-right: 1rem
+
+        .navlink
+            padding: 1rem
+            color: black
+
+.content
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100vw
+    height: 100vh
+    
+
+    
+    
+
+.page
+    position: relative
+    display: flex
+    flex-direction: row
+    width: 70vw
+    height: 70vh
+    margin-bottom: 10vh
+    background: #fff
+    padding: 30px
+    z-index: auto
+    
+    
+
+.page, .page::before
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.25)
+    border: 1px solid #bbb
+
+.page::before
+    content: ""
+    position: absolute
+    height: 100%
+    width: 100%
+    background-color: #f5eded
+    right: 0
+    top: 0
+    transform: rotate(-1.25deg)
+    z-index: -1
+    
+
+.chat
+    display: flex
+    flex-direction: column
+    border-left: 1px solid darkgrey
+    flex-grow: 1
+    max-width: 20%
+
+.draw
+    display: flex
+    flex-grow: 5
+
+.response
+    display: flex
+    flex-grow: 6
+
+.text
+    width: 100%
+    border: none
+    border-bottom: 1.5px solid black
+    margin: .7em
+    box-shadow: none

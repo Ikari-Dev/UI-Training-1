@@ -3,64 +3,139 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
-  overflow: hidden;
-}
-
-a {
-  color: white !important;
-}
-
-html, body {
-  height: 100vh;
-  width: 100vw;
 }
 
 body {
-  background-color: #0F598C;
+  width: 100%;
+  height: 100%;
+  font-family: Roboto;
+  background: url("../ressources/wooden.jpg");
+  overflow: hidden;
 }
 
-ul {
-  padding: 1em !important;
-  background-color: #07324e;
-}
-
-ul li {
-  background-color: #07324e;
-}
-
-.grid {
-  height: 100% !important;
-  width: 100% !important;
-}
-
-.cell {
-  position: relative;
-  height: 80vh !important;
-  border-radius: 20px;
-  border: 3px solid #07324e;
+.navbar {
   background-color: white;
-  margin: 0 !important;
-}
-
-.grid-x {
-  padding: 3em !important;
-}
-
-.sender {
-  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  bottom: 0;
-  margin-bottom: 0;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-decoration: none;
 }
 
-.sender .intext {
-  margin-bottom: 0;
+.navbar .titlebar {
+  margin-left: 2rem;
+}
+
+.navbar .titlebar .title {
+  color: black;
+}
+
+.navbar .link {
+  margin-right: 1rem;
+}
+
+.navbar .link .navlink {
+  padding: 1rem;
+  color: black;
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.page {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 70vw;
+  height: 70vh;
+  margin-bottom: 10vh;
+  background: #fff;
+  padding: 30px;
+  z-index: auto;
+}
+
+.page, .page::before {
+  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+  border: 1px solid #bbb;
+}
+
+.page::before {
+  content: "";
+  position: absolute;
+  height: 100%;
   width: 100%;
+  background-color: #f5eded;
+  right: 0;
+  top: 0;
+  -webkit-transform: rotate(-1.25deg);
+          transform: rotate(-1.25deg);
+  z-index: -1;
 }
 
-.sender .send {
-  border: 1px solid black;
+.chat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-left: 1px solid darkgrey;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  max-width: 20%;
+}
+
+.draw {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 5;
+      -ms-flex-positive: 5;
+          flex-grow: 5;
+}
+
+.response {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 6;
+      -ms-flex-positive: 6;
+          flex-grow: 6;
+}
+
+.text {
+  width: 100%;
+  border: none;
+  border-bottom: 1.5px solid black;
+  margin: .7em;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 /*# sourceMappingURL=app.css.map */
